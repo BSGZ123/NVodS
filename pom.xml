@@ -18,6 +18,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>bskplu_api</module>
+        <module>bskplu_common</module>
+        <module>bskplu_gateway</module>
+        <module>bskplu_service</module>
     </modules>
 
     <properties>
