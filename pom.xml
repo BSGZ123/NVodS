@@ -9,6 +9,7 @@
         <version>2.3.12.RELEASE</version>
         <relativePath/>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.bskplu</groupId>
     <artifactId>NVodS</artifactId>
@@ -215,7 +216,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
