@@ -17,8 +17,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="NVodS" options="" />
       <module name="api_user" options="-parameters" />
-      <module name="bskplu_api" options="-parameters" />
-      <module name="bskplu_common" options="" />
+      <module name="bskplu_api" options="" />
+      <module name="bskplu_common" options="-parameters" />
       <module name="bskplu_gateway" options="-parameters" />
       <module name="bskplu_service" options="" />
       <module name="common_utils" options="-parameters" />

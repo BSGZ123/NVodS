@@ -23,9 +23,9 @@
     <dependencies>
         <!-- 服务依赖 -->
 <!--        <dependency>-->
-<!--            <groupId>top.yangbuyi</groupId>-->
+<!--            <groupId>com.bskplu</groupId>-->
 <!--            <artifactId>service_base</artifactId>-->
-<!--            <version>1.0</version>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
 <!--        </dependency>-->
         <!--mysql-->
         <dependency>
