@@ -26,12 +26,15 @@ public class JwtUtils {
      */
     public static final long EXPIRE =1000 * 60 * 60 * 24;
 
+
     /**
-    根据id和昵称获取token
-    带入id和name参数
+     * 根据id和昵称获取token
+     * 带入id和name参数
+     * @param id
+     * @param nickname
+     * @return
      */
     public static String getJwtToken(String id,String nickname){
-
 
         return Jwts.builder()
                 .setHeaderParam("typ", "JWT")
@@ -50,9 +53,9 @@ public class JwtUtils {
     }
 
     /**
-     判断token是否存在和有效
-     @param jwtToken
-     @return
+     * 判断token是否存在和有效
+     * @param jwtToken
+     * @return
      */
     public static boolean checkToken(String jwtToken) {
         if (StringUtils.isEmpty(jwtToken)) return false;
@@ -65,16 +68,22 @@ public class JwtUtils {
         return true;
     }
 
+
     /**
-     判断请求中token是否存在和有效
+     * 判断请求中token是否存在和有效
+     * @param request
+     * @return
      */
     public static boolean checkToken(HttpServletRequest request) {
         String jwtToken = request.getHeader("token");
         return checkToken(jwtToken);
     }
 
+
     /**
      * 根据token获取id
+     * @param request
+     * @return
      */
     public static String getUserIdByJwtToken(HttpServletRequest request){
         String jwtToken =request.getHeader("token");
