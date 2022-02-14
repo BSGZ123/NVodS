@@ -11,6 +11,7 @@
         <module name="api_user" />
         <module name="service_user" />
         <module name="common_utils" />
+        <module name="service_security" />
         <module name="service_base" />
       </profile>
     </annotationProcessing>
@@ -20,11 +21,12 @@
       <module name="NVodS" options="" />
       <module name="api_user" options="-parameters" />
       <module name="bskplu_api" options="" />
-      <module name="bskplu_common" options="-parameters" />
+      <module name="bskplu_common" options="" />
       <module name="bskplu_gateway" options="-parameters" />
       <module name="bskplu_service" options="" />
       <module name="common_utils" options="-parameters" />
       <module name="service_base" options="-parameters" />
+      <module name="service_security" options="-parameters" />
       <module name="service_user" options="-parameters" />
     </option>
   </component>

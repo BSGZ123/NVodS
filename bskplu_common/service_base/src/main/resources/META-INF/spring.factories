@@ -1,0 +1,6 @@
+
+#???????
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.bskplu.service_base.handler.MybatisPlusMetaObjectHandler,\
+  com.bskplu.service_base.config.MybatisPlusAppConfig,\
+  com.bskplu.service_base.config.RedisConfig
