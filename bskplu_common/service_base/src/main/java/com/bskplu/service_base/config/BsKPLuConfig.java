@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @Date 2022/2/14
  * @Version 1.1
  */
-
+//这里需要注意！！！
 @Component
 @ConfigurationProperties(prefix = "bskplu")
 public class BsKPLuConfig {
