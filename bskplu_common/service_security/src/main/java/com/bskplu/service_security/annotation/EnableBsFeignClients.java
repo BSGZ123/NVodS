@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @EnableFeignClients
-public @interface EnableYsFeignClients {
+public @interface EnableBsFeignClients {
     String[] value() default {};
 
     String[] basePackages() default { "com.bskplu" };
