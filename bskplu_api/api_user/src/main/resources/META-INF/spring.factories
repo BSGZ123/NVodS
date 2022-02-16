@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.bskplu.api_user.factory.RemoteUserFactory,\
+  com.bskplu.api_user.entity.User
