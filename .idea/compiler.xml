@@ -7,27 +7,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bskplu_gateway" />
-        <module name="api_user" />
         <module name="service_user" />
         <module name="common_utils" />
         <module name="service_security" />
         <module name="service_base" />
+        <module name="bskplu_gateway" />
+        <module name="api_vod" />
+        <module name="api_user" />
+        <module name="service_video" />
+        <module name="api_video" />
+        <module name="api_pay" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="NVodS" options="" />
+      <module name="api_pay" options="-parameters" />
       <module name="api_user" options="-parameters" />
+      <module name="api_video" options="-parameters" />
+      <module name="api_vod" options="-parameters" />
       <module name="bskplu_api" options="" />
       <module name="bskplu_common" options="" />
       <module name="bskplu_gateway" options="-parameters" />
-      <module name="bskplu_service" options="" />
+      <module name="bskplu_service" options="-parameters" />
       <module name="common_utils" options="-parameters" />
       <module name="service_base" options="-parameters" />
       <module name="service_security" options="-parameters" />
       <module name="service_user" options="-parameters" />
+      <module name="service_video" options="-parameters" />
     </option>
   </component>
 </project>

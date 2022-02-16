@@ -12,6 +12,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>api_user</module>
+        <module>api_video</module>
+        <module>api_pay</module>
+        <module>api_vod</module>
     </modules>
 
 
