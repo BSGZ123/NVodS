@@ -24,14 +24,13 @@ public interface UserService extends IService<User> {
     /**
      * 用户注册
      * @param registerVo
-     * @return
      */
-    String register(RegisterVo registerVo);
+    void register(RegisterVo registerVo);
 
     /**
      * 根据openid查询用户
      * @param openId
      * @return
      */
-    String getByOpenid(String openId);
+    User getByOpenid(String openId);
 }
