@@ -15,6 +15,7 @@
         <module>api_video</module>
         <module>api_pay</module>
         <module>api_vod</module>
+        <module>api_websocket</module>
     </modules>
 
 

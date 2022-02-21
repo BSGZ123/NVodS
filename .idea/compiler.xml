@@ -17,6 +17,7 @@
         <module name="service_video" />
         <module name="api_video" />
         <module name="api_pay" />
+        <module name="api_websocket" />
       </profile>
     </annotationProcessing>
   </component>
@@ -27,10 +28,11 @@
       <module name="api_user" options="-parameters" />
       <module name="api_video" options="-parameters" />
       <module name="api_vod" options="-parameters" />
+      <module name="api_websocket" options="-parameters" />
       <module name="bskplu_api" options="" />
       <module name="bskplu_common" options="" />
       <module name="bskplu_gateway" options="-parameters" />
-      <module name="bskplu_service" options="-parameters" />
+      <module name="bskplu_service" options="" />
       <module name="common_utils" options="-parameters" />
       <module name="service_base" options="-parameters" />
       <module name="service_security" options="-parameters" />
