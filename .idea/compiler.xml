@@ -16,6 +16,7 @@
         <module name="api_user" />
         <module name="service_video" />
         <module name="api_video" />
+        <module name="service_cms" />
         <module name="api_pay" />
         <module name="api_websocket" />
       </profile>
@@ -35,6 +36,7 @@
       <module name="bskplu_service" options="" />
       <module name="common_utils" options="-parameters" />
       <module name="service_base" options="-parameters" />
+      <module name="service_cms" options="-parameters" />
       <module name="service_security" options="-parameters" />
       <module name="service_user" options="-parameters" />
       <module name="service_video" options="-parameters" />
