@@ -15,6 +15,7 @@
         <module>service_user</module>
         <module>service_video</module>
         <module>service_cms</module>
+        <module>service_authority</module>
     </modules>
 
     <properties>

@@ -9,15 +9,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="service_user" />
         <module name="common_utils" />
+        <module name="api_vod" />
+        <module name="service_cms" />
+        <module name="api_pay" />
+        <module name="service_authority" />
         <module name="service_security" />
         <module name="service_base" />
         <module name="bskplu_gateway" />
-        <module name="api_vod" />
         <module name="api_user" />
         <module name="service_video" />
         <module name="api_video" />
-        <module name="service_cms" />
-        <module name="api_pay" />
         <module name="api_websocket" />
       </profile>
     </annotationProcessing>
@@ -35,6 +36,7 @@
       <module name="bskplu_gateway" options="-parameters" />
       <module name="bskplu_service" options="" />
       <module name="common_utils" options="-parameters" />
+      <module name="service_authority" options="-parameters" />
       <module name="service_base" options="-parameters" />
       <module name="service_cms" options="-parameters" />
       <module name="service_security" options="-parameters" />
