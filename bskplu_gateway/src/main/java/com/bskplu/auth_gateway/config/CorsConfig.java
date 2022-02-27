@@ -17,7 +17,7 @@ import org.springframework.web.util.pattern.PathPatternParser;
 @Configuration
 public class CorsConfig {
     /**
-     * web过滤器
+     * web过滤器 配置跨源CORS设置
      * @return
      */
     @Bean
