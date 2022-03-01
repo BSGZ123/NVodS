@@ -6,6 +6,10 @@ import com.bskplu.common_utils.utils.ResponseResult;
 import com.bskplu.service_authority.entity.Menu;
 import com.bskplu.service_authority.mapper.MenuMapper;
 import com.bskplu.service_authority.service.MenuService;
+import com.bskplu.service_authority.service.RoleMenuService;
+import com.bskplu.service_authority.service.UserService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -16,7 +20,11 @@ import java.util.List;
  * @Date 2022/2/28
  * @Version 1.1
  */
+@Service
+@RequiredArgsConstructor
 public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements MenuService {
+    private final RoleMenuService roleMenuService;
+    private final UserService userService;
     @Override
     public List<Menu> getMenuList() {
         return null;
@@ -46,4 +54,6 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
     public List<JSONObject> selectPermissionByUserId(String id) {
         return null;
     }
+
+
 }
