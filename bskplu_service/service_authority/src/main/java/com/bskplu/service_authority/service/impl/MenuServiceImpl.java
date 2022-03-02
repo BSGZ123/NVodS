@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bskplu.common_utils.constant.Constants;
 import com.bskplu.common_utils.utils.ResponseResult;
 import com.bskplu.service_authority.entity.Menu;
+import com.bskplu.service_authority.entity.Role;
 import com.bskplu.service_authority.entity.RoleMenu;
 import com.bskplu.service_authority.entity.User;
 import com.bskplu.service_authority.mapper.MenuMapper;
@@ -19,6 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -77,19 +79,58 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
         return buildTreeMenuList(menus);
     }
 
+    /**
+     * 保存角色菜单关系
+     * @param roleId
+     * @param menuIds
+     * @return
+     */
     @Override
     public ResponseResult saveRoleMenuRelationShip(String roleId, String[] menuIds) {
-        return null;
+        roleMenuService.remove(new LambdaQueryWrapper<RoleMenu>().eq(RoleMenu::getRoleId,roleId));
+        final List<RoleMenu> list=new ArrayList<>();
+        Arrays.stream(menuIds).forEach(e -> {
+            list.add(new RoleMenu().setRoleId(roleId).setPermissionId(e));
+        });
+        return ResponseResult.toOk(roleMenuService.saveBatch(list));
     }
 
+    /**
+     * 根据用户id查询用户所具备的权限内容
+     * @param id
+     * @return
+     */
     @Override
     public List<String> selectPermissionValueByUserId(String id) {
-        return null;
+        List<String> selectPermissionValueList=null;
+        if (this.isSysAdmin(id)) {
+            //如果是系统管理员，则获取所有菜单权限
+            selectPermissionValueList = baseMapper.selectAllMenuValue();
+        } else {
+            //不是管理员，就根据用户查询菜单权限
+            selectPermissionValueList = baseMapper.selectMenuValueByUserId(id);
+        }
+        return selectPermissionValueList;
     }
 
+    /**
+     * 根据用户id查询用户所具有的菜单 返回给前端
+     * @param id
+     * @return
+     */
     @Override
     public List<JSONObject> selectPermissionByUserId(String id) {
-        return null;
+        List<Menu> selectMenuList=null;
+        if(this.isSysAdmin(id)){//同上一个方法
+            selectMenuList=baseMapper.selectList(null);
+        }else{
+            selectMenuList=baseMapper.selectMenuByUserId(id);
+        }
+        //1.构建树形菜单
+        List<Menu> menuList = buildTreeMenuList(selectMenuList);
+        //2.返回给前端json数据
+        return buildMenuWebList(menuList);
+
     }
 
     /**
