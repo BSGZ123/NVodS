@@ -1,9 +1,9 @@
 package com.bskplu.service_authority.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.bskplu.service_authority.entity.RoleMenu;
-import com.bskplu.service_authority.mapper.RoleMenuMapper;
-import com.bskplu.service_authority.service.RoleMenuService;
+import com.bskplu.service_authority.entity.UserRole;
+import com.bskplu.service_authority.mapper.UserRoleMapper;
+import com.bskplu.service_authority.service.UserRoleService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,6 +14,6 @@ import org.springframework.stereotype.Service;
  * @Version 1.1
  */
 @Service
-public class RoleMenuServiceImpl extends ServiceImpl<RoleMenuMapper, RoleMenu> implements RoleMenuService {
+public class RoleMenuServiceImpl extends ServiceImpl<UserRoleMapper, UserRole> implements UserRoleService {
 
 }
