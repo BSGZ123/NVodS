@@ -6,7 +6,7 @@ spring:
         # 服务注册地址
         server-addr: localhost:8848
         group: bskplu_video
-        namespace: 49360319-245e-4a37-8b38-7d76620d4f0a
+        #namespace: 49360319-245e-4a37-8b38-7d76620d4f0a
       config:
         # 配置中心地址
         server-addr: localhost:8848
