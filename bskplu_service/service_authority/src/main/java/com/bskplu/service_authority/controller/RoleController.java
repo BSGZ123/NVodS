@@ -10,10 +10,9 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @ClassName: RoleController
@@ -43,4 +42,39 @@ public class RoleController {
         roleService.page(rolePage,wrapper);
         return ResponseResult.ok().data("items",rolePage.getRecords()).data("total",rolePage.getRecords());
     }
+    @ApiOperation(value = "获取角色")
+    @GetMapping("/getRoleById/{id}")
+    public ResponseResult get(@PathVariable String id){
+        Role role=roleService.getById(id);
+        return ResponseResult.ok().data("item",role);
+    }
+
+    @ApiOperation(value = "保存角色信息")
+    @PostMapping("/saveRole")
+    public ResponseResult save(@RequestBody Role role){
+        roleService.save(role);
+        return ResponseResult.ok();
+    }
+    @ApiOperation(value = "修改角色信息")
+    @PostMapping("/updateRole")
+    public ResponseResult updateById(@RequestBody Role role){
+        roleService.updateById(role);
+        return ResponseResult.ok();
+    }
+
+    @ApiOperation(value = "删除角色信息")
+    @PostMapping("/removeRole/{id}")
+    public ResponseResult remove(@PathVariable String id){
+        roleService.removeById(id);
+        return ResponseResult.ok();
+    }
+
+    @ApiOperation(value = "根据id列表删除角色信息")
+    @PostMapping("/batchRemove")
+    public ResponseResult batchRemove(@RequestBody List<String> idList){
+        roleService.removeByIds(idList);
+        return ResponseResult.ok();
+    }
+
+
 }
