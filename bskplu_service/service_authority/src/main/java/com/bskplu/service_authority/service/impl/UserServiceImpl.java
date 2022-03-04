@@ -27,6 +27,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public User selectByUsername(String username) {
-        return null;
+        return baseMapper.selectOne(new LambdaQueryWrapper<User>().eq(StringUtils.isNotBlank(username),User::getUsername,username));
     }
 }
