@@ -1,5 +1,17 @@
+# Tomcat
+server:
+  port: 8004
+
 # Spring
-spring:
+spring: 
+  application:
+    # 应用名称
+    name: service-authority
+  profiles:
+    # 环境配置
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
   cloud:
     nacos:
       discovery:

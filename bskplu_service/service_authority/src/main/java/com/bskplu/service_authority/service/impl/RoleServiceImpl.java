@@ -8,9 +8,9 @@ import com.bskplu.service_authority.entity.UserRole;
 import com.bskplu.service_authority.mapper.RoleMapper;
 import com.bskplu.service_authority.service.RoleService;
 import com.bskplu.service_authority.service.UserRoleService;
+import com.bskplu.service_base.utils.text.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +32,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
     private UserRoleService userRoleService;
 
     /**
-     * 根据用户id查找角色
+     * 根据用户id获取用户数据
      * @param userId
      * @return
      */
@@ -61,17 +61,16 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
         return roleMap;
     }
 
-
     /**
-     * 根据用户保存角色信息
+     * 根据用户id和角色id保存角色信息
      * @param userId
      * @param roleIds
      */
     @Override
     public void saveUserRoleRelationShip (String userId, String[] roleIds) {
-        //首先要删除原有关系
+        //删除原来关系
         userRoleService.remove(new LambdaQueryWrapper<UserRole>().eq(UserRole::getUserId, userId));
-        //重新建立保存关系
+        //重新建立关系
         List<UserRole> userRoleList = new ArrayList<>();
         for (String roleId : roleIds) {
             if (StringUtils.isEmpty(roleId)) { continue; }
@@ -83,11 +82,6 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
         userRoleService.saveBatch(userRoleList);
     }
 
-    /**
-     * 根据用户id查找角色信息
-     * @param id
-     * @return
-     */
     @Override
     public List<Role> selectRoleByUserId (String id) {
         //根据用户id查询拥有的角色id

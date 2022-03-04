@@ -2,12 +2,10 @@ package com.bskplu.service_authority.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bskplu.common_utils.constant.Constants;
 import com.bskplu.common_utils.utils.ResponseResult;
 import com.bskplu.service_authority.entity.Menu;
-import com.bskplu.service_authority.entity.Role;
 import com.bskplu.service_authority.entity.RoleMenu;
 import com.bskplu.service_authority.entity.User;
 import com.bskplu.service_authority.mapper.MenuMapper;
