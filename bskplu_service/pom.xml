@@ -17,6 +17,7 @@
         <module>service_cms</module>
         <module>service_authority</module>
         <module>service_websocket</module>
+        <module>service_vod</module>
     </modules>
 
     <properties>
