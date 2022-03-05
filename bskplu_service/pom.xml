@@ -16,6 +16,7 @@
         <module>service_video</module>
         <module>service_cms</module>
         <module>service_authority</module>
+        <module>service_websocket</module>
     </modules>
 
     <properties>
