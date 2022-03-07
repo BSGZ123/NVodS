@@ -18,6 +18,8 @@
         <module>service_authority</module>
         <module>service_websocket</module>
         <module>service_vod</module>
+        <module>service_pay</module>
+        <module>service_upload</module>
     </modules>
 
     <properties>

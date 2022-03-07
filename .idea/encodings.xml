@@ -15,6 +15,8 @@
     <file url="file://$PROJECT_DIR$/bskplu_gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bskplu_service/service_authority/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bskplu_service/service_cms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bskplu_service/service_pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bskplu_service/service_upload/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bskplu_service/service_user/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bskplu_service/service_user/src/main/resource" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bskplu_service/service_video/src/main/java" charset="UTF-8" />
