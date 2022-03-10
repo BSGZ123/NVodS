@@ -9,11 +9,14 @@ import com.bskplu.service_video.entity.excel.CategoryData;
 import com.bskplu.service_video.listener.CategoryDataListener;
 import com.bskplu.service_video.mapper.CategoryMapper;
 import com.bskplu.service_video.service.CategoryService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -23,6 +26,7 @@ import java.util.List;
  * @Date 2022/3/10
  * @Version 1.1
  */
+@Service
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {
 
     @Autowired
@@ -53,8 +57,24 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
         //封装模型数据
         List<LevelCategory> reList=new ArrayList<>();
         for(Category oneCategory:oneCategories ){
+            //把category转换成LevelCategory
+            LevelCategory oneLevelCategory =new LevelCategory();
 
+            //属性的复制 把被复制的对象属性一一对应复制到新的对象中 原对象没有的属性就不复制
+            BeanUtils.copyProperties(oneCategory,oneLevelCategory);
+
+            //嵌套循环 获取子类（遍历所有二级子类）
+            for (Category twoCategory: twoCategories){
+                //如果二级子类的parentId与一级的parentId相等，则可知当前二级子类就是一级的子类
+                if(twoCategory.getParentId().equals(oneCategory.getParentId())){
+                    LevelCategory twoLevelCategory=new LevelCategory();
+                    BeanUtils.copyProperties(twoCategory,twoLevelCategory);
+                    oneLevelCategory.getChildren().add(twoLevelCategory);
+                }
+            }
+            reList.add(oneLevelCategory);
         }
-        return null;
+        Collections.reverse(reList);
+        return reList;
     }
 }
