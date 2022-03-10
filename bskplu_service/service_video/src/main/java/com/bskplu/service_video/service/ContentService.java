@@ -38,10 +38,10 @@ public interface ContentService extends IService<Content> {
 
     /**
      *
-     * @param categoryVo
+     * @param contentVo
      * @return
      */
-    ResponseResult getContentListPage(ContentVo categoryVo);
+    ResponseResult getContentListPage(ContentVo contentVo);
 
     /**
      * 通过id删除内容
