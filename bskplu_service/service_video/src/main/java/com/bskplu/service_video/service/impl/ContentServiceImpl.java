@@ -1,11 +1,15 @@
 package com.bskplu.service_video.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bskplu.api_video.entity.Content;
 import com.bskplu.api_video.entity.ContentDescription;
 import com.bskplu.api_video.entity.vo.ContentVo;
 import com.bskplu.api_video.entity.vo.ContentWebVO;
+import com.bskplu.common_utils.constant.Constants;
 import com.bskplu.common_utils.utils.ResponseResult;
+import com.bskplu.service_base.utils.text.StringUtils;
 import com.bskplu.service_video.mapper.ContentMapper;
 import com.bskplu.service_video.service.ChapterService;
 import com.bskplu.service_video.service.ContentDescriptionService;
@@ -73,17 +77,41 @@ public class ContentServiceImpl extends ServiceImpl<ContentMapper, Content> impl
 
     @Override
     public ResponseResult getContentPreview(String id) {
-        return null;
+        return ResponseResult.ok().data(this.baseMapper.getContentPreviewWhitById(id));
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult sendContent(String id) {
-        return null;
+        final Content content=new Content();
+        content.setId(id);
+        content.setStatus(Constants.CONTENT_STATUS_NORMAL);
+        return ResponseResult.toOk(this.updateById(content));
     }
 
     @Override
-    public ResponseResult getContentListPage(ContentVo categoryVo) {
-        return null;
+    public ResponseResult getContentListPage(ContentVo contentVo) {
+        final Page<Content> contentPage=new Page<>(contentVo.getPage(),contentVo.getLimit());
+        final LambdaQueryWrapper<Content> wrapper=new LambdaQueryWrapper<>();
+        wrapper.eq(StringUtils.isNoneBlank(contentVo.getCategoryParentId()), Content::getCategoryParentId, contentVo.getCategoryParentId())
+                .eq(StringUtils.isNoneBlank(contentVo.getCategoryId()),Content::getCategoryId,contentVo.getCategoryId())
+                .eq(StringUtils.isNoneBlank(contentVo.getAuthorId()),Content::getAuthorId,contentVo.getAuthorId())
+                .like(StringUtils.isNoneBlank(contentVo.getTitle()),Content::getTitle,contentVo.getTitle())
+                .eq(Content::getIsDeleted,0);
+
+        if (contentVo.getType()!=null){
+            if (contentVo.getType()==1){
+                wrapper.orderByDesc(Content::getBuyCount);
+            }
+            if (contentVo.getType()==2){
+                wrapper.orderByDesc(Content::getGmtCreate);
+            }
+            if (contentVo.getType()==3){
+                wrapper.orderByDesc(Content::getPrice);
+            }
+        }
+        this.baseMapper.selectPage(contentPage,wrapper);
+        return ResponseResult.ok().dataPage(contentPage.getRecords(),contentPage.getTotal());
     }
 
     @Override
