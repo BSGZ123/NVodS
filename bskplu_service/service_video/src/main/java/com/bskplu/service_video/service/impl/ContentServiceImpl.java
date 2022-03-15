@@ -1,6 +1,7 @@
 package com.bskplu.service_video.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bskplu.api_video.entity.Content;
@@ -17,6 +18,7 @@ import com.bskplu.service_video.service.ContentService;
 import com.bskplu.service_video.service.ContentVideoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.querydsl.QuerydslRepositoryInvokerAdapter;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -115,22 +117,46 @@ public class ContentServiceImpl extends ServiceImpl<ContentMapper, Content> impl
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult deleteContentById(String id) {
-        return null;
+        //删除关联的小结和视频
+        this.contentVideoService.deleteContentVideoWithByContentId(id);
+        //删除关联的章节
+        this.chapterService.deleteChapterByContentId(id);
+        //删除作品
+        final int i=this.baseMapper.deleteById(id);
+        return ResponseResult.toOk(i>0);
     }
 
     @Override
     public List<Content> selectByAuthorId(String id) {
-        return null;
+        //这里需要注意一下
+        QueryWrapper<Content> queryWrapper=new QueryWrapper<>();
+        queryWrapper.eq("author_id",id);
+        //根据最后更新时间倒序排列
+        queryWrapper.orderByDesc("gmt_modified");
+        return baseMapper.selectList(queryWrapper);
     }
 
     @Override
+    /**
+     * 获取作品详情和更新播放信息
+     */
     public ContentWebVO selectContentDetailById(String contentId) {
-        return null;
+        this.updatePageViewCount(contentId);
+        return baseMapper.getContentDetailById(contentId);
     }
 
+    /**
+     * 更新播放信息
+     * @param contentId
+     * @return
+     */
     @Override
     public ResponseResult updatePageViewCount(String contentId) {
-        return null;
+        Content content=baseMapper.selectById(contentId);
+        content.setViewCount(content.getViewCount()+1);
+        baseMapper.updateById(content);
+        return ResponseResult.ok();
     }
 }
