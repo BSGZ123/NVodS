@@ -1,6 +1,7 @@
 package com.bskplu.service_video.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bskplu.api_video.entity.ContentVideo;
 import com.bskplu.api_video.entity.vo.ContentVideoInfoVO;
@@ -79,8 +80,15 @@ public class ContentVideoServiceImpl extends ServiceImpl<ContentVideoMapper, Con
         return this.baseMapper.deleteById(id) > 0;
     }
 
+    /**
+     * 根据视频内容id删除指定内容
+     * @param id
+     * @return
+     */
     @Override
     public boolean deleteContentVideoWithByContentId(String id) {
-        return false;
+        QueryWrapper<ContentVideo> wrapper=new QueryWrapper<>();
+        wrapper.eq("content_id",id);
+        return baseMapper.delete(wrapper)>0;
     }
 }
