@@ -93,4 +93,43 @@ public class AuthorController {
     }
 
 
+    /**
+     * 添加作者
+     * @param author
+     * @return
+     */
+    @ApiOperation(value = "添加作者")
+    @PostMapping("/addAuthor")
+    public ResponseResult addAuthor(@ApiParam(name = "author",value = "作者对象",required = true)
+                                    @RequestBody Author author){
+        return ResponseResult.toOk(authorService.save(author));
+    }
+
+
+    /**
+     * 更新作者信息
+     * @param author
+     * @return
+     */
+    @ApiOperation(value = "更新创作者")
+    @PostMapping("/updateAuthor")
+    public ResponseResult updateAuthor(@ApiParam(name = "author",value = "作者对象",required = true)
+                                                   @RequestBody Author author){
+        return ResponseResult.toOk(authorService.updateById(author));
+    }
+
+
+    /**
+     * 根据作者id删除作者信息
+     * @param id
+     * @return
+     */
+    @ApiOperation("根据作者id删除作者信息")
+    @PostMapping("/deleteById/{id}")
+    public ResponseResult deleteById(@ApiParam(name = "作者id") @PathVariable Long id){
+        return ResponseResult.toOk(authorService.removeById(id));
+    }
+
+
+
 }
