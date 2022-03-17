@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * @ClassName: ResponseResult
- * @Description: bskplu_viedo 网站状态返回字段
+ * @Description: bskplu_viedo 网站状态返回字段 返回处理数据
  * @Author BsKPLu
  * @Date 2022/2/13
  * @Version 1.1
