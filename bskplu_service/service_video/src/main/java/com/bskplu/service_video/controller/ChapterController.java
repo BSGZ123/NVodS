@@ -1,13 +1,12 @@
 package com.bskplu.service_video.controller;
 
+import com.bskplu.api_video.entity.Chapter;
 import com.bskplu.common_utils.utils.ResponseResult;
 import com.bskplu.service_video.service.ChapterService;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName: ChapterController
@@ -28,5 +27,28 @@ public class ChapterController {
         return ResponseResult.ok().data(chapterService.getChapterContentVideo(contentId));
     }
 
+    @ApiOperation(value = "新增章节")
+    @PostMapping
+    public ResponseResult insertChapter(@RequestBody Chapter chapter){
+        return ResponseResult.toOk(chapterService.save(chapter));
+    }
+
+    @ApiOperation(value = "修改章节")
+    @PutMapping
+    public ResponseResult updateChapter(@RequestBody Chapter chapter){
+        return ResponseResult.toOk(chapterService.updateById(chapter));
+    }
+
+    @ApiOperation(value = "删除章节")
+    @DeleteMapping("{id}")
+    public ResponseResult deleteChapterById(@ApiParam(name = "id",value = "章节id",required = true) @PathVariable String id){
+        return ResponseResult.toOk(chapterService.deleteChapterById(id));
+    }
+
+    @ApiOperation(value = "章节或小节排序最大值")
+    @PostMapping("/getContentOrVideoSortMax/{type}")
+    public ResponseResult getContentOrVideoSortMax(@PathVariable Integer type){
+        return ResponseResult.ok().data(this.chapterService.getContentOrVideoSortMax(type));
+    }
 
 }
