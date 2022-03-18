@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bskplu.api_video.entity.ContentVideo;
 import com.bskplu.api_video.entity.vo.ContentVideoInfoVO;
-import com.bskplu.api_video.entity.vo.ContentVideoVO;
 import com.bskplu.api_vod.VodClient;
 import com.bskplu.common_utils.utils.ResponseResult;
 import com.bskplu.common_utils.utils.ResultCode;
@@ -48,7 +47,7 @@ public class ContentVideoServiceImpl extends ServiceImpl<ContentVideoMapper, Con
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public boolean addContentVideo(ContentVideoVO contentVideoVO) {
+    public boolean addContentVideo(ContentVideoInfoVO contentVideoVO) {
         final ContentVideo contentVideo=new ContentVideo();
         BeanUtils.copyProperties(contentVideoVO,contentVideo);
         return this.save(contentVideo);

@@ -39,7 +39,7 @@
       <module name="bskplu_api" options="" />
       <module name="bskplu_common" options="" />
       <module name="bskplu_gateway" options="-parameters" />
-      <module name="bskplu_service" options="" />
+      <module name="bskplu_service" options="-parameters" />
       <module name="common_utils" options="-parameters" />
       <module name="service_authority" options="-parameters" />
       <module name="service_base" options="-parameters" />

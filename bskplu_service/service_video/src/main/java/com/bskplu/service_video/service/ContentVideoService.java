@@ -3,7 +3,6 @@ package com.bskplu.service_video.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.bskplu.api_video.entity.ContentVideo;
 import com.bskplu.api_video.entity.vo.ContentVideoInfoVO;
-import com.bskplu.api_video.entity.vo.ContentVideoVO;
 
 /**
  * @InterfaceName: ContentVideoService
@@ -25,7 +24,7 @@ public interface ContentVideoService extends IService<ContentVideo> {
      * @param contentVideoVO
      * @return
      */
-    boolean addContentVideo(ContentVideoVO contentVideoVO);
+    boolean addContentVideo(ContentVideoInfoVO contentVideoVO);
 
     /**
      * 更新视频内容
