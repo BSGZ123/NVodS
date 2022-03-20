@@ -1,0 +1,14 @@
+[33m2022-03-20 23:08:05[0;39m [32m[background-preinit][0;39m INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
+[33m2022-03-20 23:08:06[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.c.i.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\BsKPLu\nacos\config
+[33m2022-03-20 23:08:06[0;39m [32m[restartedMain][0;39m INFO  c.a.nacos.client.config.impl.Limiter - limitTime:5.0
+[33m2022-03-20 23:08:06[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.utils.JVMUtil - isMultiInstance:false
+[33m2022-03-20 23:08:06[0;39m [32m[restartedMain][0;39m INFO  c.b.service_video.VideoApplication - The following profiles are active: dev
+[33m2022-03-20 23:08:08[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+[33m2022-03-20 23:08:08[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[33m2022-03-20 23:08:08[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[33m2022-03-20 23:08:08[0;39m [32m[restartedMain][0;39m INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[33m2022-03-20 23:08:08[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Starting...
+[33m2022-03-20 23:08:08[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Start completed.
+[33m2022-03-20 23:08:09[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown initiated...
+[33m2022-03-20 23:08:09[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown completed.
+[33m2022-03-20 23:08:09[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
