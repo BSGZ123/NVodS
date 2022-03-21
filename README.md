@@ -4,6 +4,7 @@
 是个学习项目同样也是毕业设计
 
 ##关于项目开发学习中遇到的问题
+
 ###主要问题1：AbstractMethodError: com.alibaba.cloud.sentinel.feign.SentinelContractHolder.parseAndValidateMetadat...
 在之前使用的Spring Cloud和Spring Cloud Alibaba版本之间出现接口名不一致的问题，在 Hoxton.SR1 中，fegin.context 接口的定义为 parseAndValidatateMetadata，
 而在 Hoxton.SR3 中，fegin.context 接口的定义为 parseAndValidateMetadata，就是之前版本中定义的方法名拼写错误，所以在 Hoxton.SR1 后面的版本更正过来。
@@ -16,8 +17,11 @@
 只是没想到这么迷，以后直接用新版本重新写这个项目。。。。。
 
 ###细碎的问题：
+
 ####粗心啦！键盘一敲快，字打错啦，然后好几天才发现
+
 ####controller层的@PostMapping注解，一不小心将两个方法注解参数写一样了啦
+
 ####等等各种各样小错误。。。
 
 BsKPLu
