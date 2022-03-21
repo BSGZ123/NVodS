@@ -1,5 +1,5 @@
 # NVodS 感谢多个开源项目，如谷粒学院
-是基于Java 8/11/13、SpringBoot 2.2.6.RELEASE、SpringCloud Hoxton.SR2、Spring Cloud Alibaba 2.2.0.RELEASE、MyBatis Plus 3.1.0
+是基于Java 8/11/13、SpringBoot 2.3.6.RELEASE、SpringCloud Hoxton.SR2、Spring Cloud Alibaba 2.2.0.RELEASE、MyBatis Plus 3.1.0
 等技术构建的一个在线视频的点播平台。
 是个学习项目同样也是毕业设计
 
