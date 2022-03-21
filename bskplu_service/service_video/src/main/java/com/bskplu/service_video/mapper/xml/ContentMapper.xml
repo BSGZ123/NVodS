@@ -28,7 +28,7 @@
         `gmt_modified`
     </sql>
 
-    <select id="getContentPreviewWhitById" resultType="com.bskplu.api_video.entity.vo.ContentPreviewVo">
+    <select id="getContentPreviewWithById" resultType="com.bskplu.api_video.entity.vo.ContentPreviewVo">
         SELECT c.title,
                c.cover,
                c.content_num                   AS contentNum,

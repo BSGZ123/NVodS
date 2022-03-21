@@ -2,9 +2,9 @@ package com.bskplu.api_vod.factory;
 
 import com.bskplu.api_vod.VodClient;
 import com.bskplu.common_utils.utils.ResponseResult;
+import feign.hystrix.FallbackFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cloud.openfeign.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 /**

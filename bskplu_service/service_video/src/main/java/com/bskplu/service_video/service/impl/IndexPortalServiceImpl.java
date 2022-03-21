@@ -43,8 +43,7 @@ public class IndexPortalServiceImpl implements IndexPortalService {
         QueryWrapper<Content> wrapper=new QueryWrapper<>();
         wrapper.orderByDesc("id");
         wrapper.last("limit 8");
-        List<Content> contentList=contentService.list(wrapper);
-        return contentList;
+        return contentService.list(wrapper);
     }
 
     /**
@@ -68,7 +67,6 @@ public class IndexPortalServiceImpl implements IndexPortalService {
         wrapper.orderByDesc("id");
         wrapper.eq("parent_id","0");
         wrapper.last("limit 8");
-        List<Category> categories=categoryService.list(wrapper);
-        return categories;
+        return categoryService.list(wrapper);
     }
 }

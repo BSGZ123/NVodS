@@ -34,7 +34,7 @@ public class ContentVideoController {
     }
 
     @ApiOperation(value = "更新视频内容")
-    @PostMapping
+    @PutMapping
     public ResponseResult updateContentVideo(@RequestBody ContentVideoInfoVO contentVideoInfoVO){
         return ResponseResult.toOk(contentVideoService.updateContentVideo(contentVideoInfoVO));
     }

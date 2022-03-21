@@ -1,9 +1,9 @@
 package com.bskplu.api_websocket.factory;
 
 import com.bskplu.api_websocket.RemoteWebsocketClient;
+import feign.hystrix.FallbackFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.cloud.openfeign.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 /**

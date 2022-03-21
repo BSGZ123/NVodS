@@ -2,9 +2,9 @@ package com.bskplu.api_video.factory;
 
 import com.bskplu.api_video.RemoteContentClient;
 import com.bskplu.api_video.entity.vo.ContentWebVO;
+import feign.hystrix.FallbackFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.cloud.openfeign.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 /**
