@@ -32,7 +32,7 @@ public class IndexServiceImpl implements IndexService {
     private final UserService userService;
     private final RoleService roleService;
     private final MenuService menuService;
-    private final RedisTemplate redisTemplate;
+    private final RedisTemplate<String, List<String>> redisTemplate;
 
     //http://129.211.209.210/demo1.html
     /**
@@ -72,7 +72,6 @@ public class IndexServiceImpl implements IndexService {
         User user=userService.selectByUsername(username);
 
         //根据用户id拉取用户所拥有的菜单权限
-        List<JSONObject> permissionList=menuService.selectPermissionByUserId(user.getId());
-        return permissionList;
+        return menuService.selectPermissionByUserId(user.getId());
     }
 }

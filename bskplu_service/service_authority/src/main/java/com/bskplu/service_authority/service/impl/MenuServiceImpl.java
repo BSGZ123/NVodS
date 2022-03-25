@@ -118,7 +118,7 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
      */
     @Override
     public List<JSONObject> selectPermissionByUserId(String id) {
-        List<Menu> selectMenuList=null;
+        List<Menu> selectMenuList;
         if(this.isSysAdmin(id)){//同上一个方法
             selectMenuList=baseMapper.selectList(null);
         }else{
