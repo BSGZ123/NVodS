@@ -32,7 +32,7 @@ public class IndexServiceImpl implements IndexService {
     private final UserService userService;
     private final RoleService roleService;
     private final MenuService menuService;
-    private final RedisTemplate<String, List<String>> redisTemplate;
+    private final RedisTemplate redisTemplate;
 
     //http://129.211.209.210/demo1.html
     /**
