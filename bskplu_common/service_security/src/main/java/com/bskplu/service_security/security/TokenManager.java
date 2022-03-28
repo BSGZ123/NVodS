@@ -4,6 +4,7 @@ import com.bskplu.common_utils.constant.Constants;
 import io.jsonwebtoken.CompressionCodecs;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
@@ -14,6 +15,7 @@ import java.util.Date;
  * @Date 2022/2/15
  * @Version 1.1
  */
+@Component
 public class TokenManager {
 
     /**
