@@ -1,7 +1,7 @@
 package com.bskplu.service_authority;
 
+import com.bskplu.service_security.annotation.EnableAuthorizeConfig;
 import com.bskplu.service_security.annotation.EnableBsFeignClients;
-import com.bskplu.service_security.annotation.EnableCustomConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 
@@ -12,7 +12,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  * @Date 2022/2/27
  * @Version 1.1
  */
-@EnableCustomConfig
+@EnableAuthorizeConfig
 @EnableBsFeignClients
 @SpringCloudApplication
 public class AuthorityApplication {

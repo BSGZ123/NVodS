@@ -25,6 +25,6 @@ import java.lang.annotation.*;
 @EnableAsync
 // 自动加载类
 @Import({ApplicationConfig.class})
-public @interface EnableCustomConfig {
+public @interface EnableAuthorizeConfig {
 
 }
