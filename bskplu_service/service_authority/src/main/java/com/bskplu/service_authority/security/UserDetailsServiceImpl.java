@@ -4,6 +4,7 @@ import com.bskplu.service_authority.entity.User;
 import com.bskplu.service_authority.service.MenuService;
 import com.bskplu.service_authority.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.BeanUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -40,6 +41,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             throw new UsernameNotFoundException("用户名或密码不正确!");
         }else {
             com.bskplu.service_security.entity.User secUser=new com.bskplu.service_security.entity.User();
+            BeanUtils.copyProperties(user,secUser);
             List<String> authorities = menuService.selectPermissionValueByUserId(user.getId());
             SecurityUser securityUser = new SecurityUser(secUser);
             securityUser.setPermissionValueList(authorities);

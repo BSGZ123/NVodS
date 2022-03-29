@@ -66,6 +66,7 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
             throws AuthenticationException {
         try {
             User user = new ObjectMapper().readValue(req.getInputStream(), User.class);
+            System.out.println(user.getUsername());
             return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword(), new ArrayList<>()));
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -79,12 +80,10 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
      * @param res
      * @param chain
      * @param auth
-     * @throws IOException
-     * @throws ServletException
      */
     @Override
     protected void successfulAuthentication(HttpServletRequest req, HttpServletResponse res, FilterChain chain,
-                                            Authentication auth) throws IOException, ServletException {
+                                            Authentication auth) {
         SecurityUser user = (SecurityUser) auth.getPrincipal();
         String token = tokenManager.createToken(user.getCurrentUserInfo().getUsername());
         // 将登陆成功的用户信息保存到缓存
@@ -99,12 +98,10 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
      * @param request
      * @param response
      * @param e
-     * @throws IOException
-     * @throws ServletException
      */
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response,
-                                              AuthenticationException e) throws IOException, ServletException {
+                                              AuthenticationException e) {
         ResponseUtil.out(response, ResponseResult.error("用户名或密码错误"));
     }
 
