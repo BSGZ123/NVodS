@@ -68,4 +68,25 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilter(new TokenLoginFilter(authenticationManager(), tokenManager, redisTemplate))
                 .addFilter(new TokenAuthenticationFilter(authenticationManager(), tokenManager, redisTemplate)).httpBasic();
     }
+
+    /**
+     * 配置用户实现类和密码生成
+     * @param auth
+     * @throws Exception
+     */
+    @Override
+    public void configure (AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService).passwordEncoder(defaultPasswordEncoder);
+    }
+
+    /**
+     * 配置不拦截
+     * @param web
+     * @throws Exception
+     */
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/api/**", "/wspoint/**");
+
+    }
 }
