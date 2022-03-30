@@ -16,6 +16,11 @@
 关键字，结果发现依然是Spring Cloud和Spring Cloud Alibaba之间不兼容导致的原因，学习的教程有些老了，就想着升升级，也到spring.io官网瞅了两眼依赖要求，
 只是没想到这么迷，以后直接用新版本重新写这个项目。。。。。
 
+### 主要问题3：在基本完成前端项目后，尝试前端和后端进行调试，登录后端时出现Full authentication is required to access this resource问题
+出现这个错误，是在实现的attemptAuthentication方法中验证前端发送的用户密码和后端查询数据库的账户密码对比出现问题，而且不是普通的账户或者密码错误，
+经过漫长的Debug后，发现是在UserDetailsServiceImpl中的查询方法中，忘了将后端数据库查询的User对象复制到Spring security的User对象，导致前端
+输入的账户密码都在跟一个内容属性都是NULL的User对象比对，导致出现该错误。
+
 ### 细碎的问题：
 
 #### 粗心啦！键盘一敲快，字打错啦，然后好几天才发现
