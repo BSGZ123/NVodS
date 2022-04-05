@@ -35,7 +35,7 @@ public class ContentController {
 
     @ApiOperation(value = "新增作品内容")
     @PostMapping("/addContentInfo")
-    public ResponseResult addContentInfo(ContentVo contentVo){
+    public ResponseResult addContentInfo(@RequestBody ContentVo contentVo){
         return ResponseResult.ok().data("contentId",contentService.addContentInfo(contentVo));
     }
 
@@ -47,7 +47,7 @@ public class ContentController {
 
     @ApiOperation(value = "修改作品内容")
     @PostMapping("/updateContentInfo")
-    public ResponseResult updateContentInfo(ContentVo contentVo){
+    public ResponseResult updateContentInfo(@RequestBody ContentVo contentVo){
         return ResponseResult.toOk(contentService.updateContentInfo(contentVo));
     }
 
