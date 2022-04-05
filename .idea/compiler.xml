@@ -37,7 +37,7 @@
       <module name="api_vod" options="-parameters" />
       <module name="api_websocket" options="-parameters" />
       <module name="bskplu_api" options="" />
-      <module name="bskplu_common" options="-parameters" />
+      <module name="bskplu_common" options="" />
       <module name="bskplu_gateway" options="-parameters" />
       <module name="bskplu_service" options="" />
       <module name="common_utils" options="-parameters" />

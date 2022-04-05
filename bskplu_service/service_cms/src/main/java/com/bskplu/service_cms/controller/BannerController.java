@@ -66,7 +66,7 @@ public class BannerController {
 
     @ApiOperation(value = "修改Banner")
     @PutMapping("update")
-    public ResponseResult updateById(@PathVariable Banner banner){
+    public ResponseResult updateById(@RequestBody Banner banner){
         Boolean b=bannerService.updateById(banner);
         bannerService.selectAllBanner();
         return ResponseResult.toOk(b);
