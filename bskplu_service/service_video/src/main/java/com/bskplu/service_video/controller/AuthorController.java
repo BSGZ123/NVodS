@@ -125,7 +125,7 @@ public class AuthorController {
      * @return
      */
     @ApiOperation("根据作者id删除作者信息")
-    @PostMapping("/deleteById/{id}")
+    @PostMapping("/deleteAuthorById/{id}")
     public ResponseResult deleteById(@ApiParam(name = "作者id") @PathVariable Long id){
         return ResponseResult.toOk(authorService.removeById(id));
     }
