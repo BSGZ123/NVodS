@@ -31,6 +31,7 @@ public class UserController implements RemoteUserClient {
     @PostMapping("/login")
     public ResponseResult login(@RequestBody LoginVo loginVo){
         String token=userService.login(loginVo);
+        //System.out.println(token);
         return ResponseResult.ok().data("token",token);
 
     }
