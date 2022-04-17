@@ -41,7 +41,7 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
      */
     @Override
     public List<Menu> getMenuList() {
-        return buildTreeMenuList(baseMapper.selectList(new LambdaQueryWrapper<Menu>()));
+        return buildTreeMenuList(baseMapper.selectList(new LambdaQueryWrapper<>()));
     }
 
     /**
