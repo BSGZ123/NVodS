@@ -55,7 +55,7 @@ public class IndexServiceImpl implements IndexService {
         redisTemplate.opsForValue().set(username, permissionValueList);
         // 组装返回前端参数
         result.put("name", user.getUsername());
-        result.put("avatar", "http://129.211.209.210/demo1.html");
+        result.put("avatar", "http://www.bskplu.buzz/image/demo1.jpg");
         result.put("roles", roles.stream().map(Role::getRoleName).collect(Collectors.toList()));
         result.put("permissionValueList", permissionValueList);
         return result;

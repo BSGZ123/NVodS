@@ -74,7 +74,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         member.setMobile(registerVo.getPhone());
         member.setPassword(registerVo.getPassword());
         member.setIsDisabled(false);
-        member.setAvatar("http://129.211.209.210/index.html");
+        member.setAvatar("http://www.bskplu.buzz/image/BsKPLu.jpg");
 
         this.save(member);
     }
