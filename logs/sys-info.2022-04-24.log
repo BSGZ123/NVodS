@@ -1,0 +1,111 @@
+[33m2022-04-24 12:27:18[0;39m [32m[background-preinit][0;39m INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.6.Final
+[33m2022-04-24 12:27:19[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.c.i.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\BsKPLu\nacos\config
+[33m2022-04-24 12:27:19[0;39m [32m[restartedMain][0;39m INFO  c.a.nacos.client.config.impl.Limiter - limitTime:5.0
+[33m2022-04-24 12:27:31[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.utils.JVMUtil - isMultiInstance:false
+[33m2022-04-24 12:27:31[0;39m [32m[restartedMain][0;39m INFO  c.b.service_video.VideoApplication - The following profiles are active: dev
+[33m2022-04-24 12:27:33[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+[33m2022-04-24 12:27:33[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[33m2022-04-24 12:27:33[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+[33m2022-04-24 12:27:34[0;39m [32m[restartedMain][0;39m INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[33m2022-04-24 12:27:34[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Starting...
+[33m2022-04-24 12:27:34[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Start completed.
+[33m2022-04-24 12:27:35[0;39m [32m[restartedMain][0;39m INFO  c.a.c.s.SentinelWebAutoConfiguration - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/*].
+[33m2022-04-24 12:27:35[0;39m [32m[restartedMain][0;39m INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[33m2022-04-24 12:27:35[0;39m [32m[restartedMain][0;39m INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33m2022-04-24 12:27:35[0;39m [32m[restartedMain][0;39m INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33m2022-04-24 12:27:36[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+[33m2022-04-24 12:27:36[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - initializer namespace from System Environment :null
+[33m2022-04-24 12:27:36[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+[33m2022-04-24 12:27:37[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+[33m2022-04-24 12:27:37[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.1.4","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8001,"scheduled":false,"serviceName":"bskplu_video@@service-video","stopped":false,"weight":1.0} to beat map.
+[33m2022-04-24 12:27:38[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] public registering service bskplu_video@@service-video with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.1.4","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8001,"weight":1.0}
+[33m2022-04-24 12:27:40[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown initiated...
+[33m2022-04-24 12:27:40[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown completed.
+[33m2022-04-24 12:27:40[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8001"]
+[33m2022-04-24 12:27:40[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[33m2022-04-24 12:27:40[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8001"]
+[33m2022-04-24 12:27:40[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8001"]
+[33m2022-04-24 12:30:48[0;39m [32m[background-preinit][0;39m INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.6.Final
+[33m2022-04-24 12:30:49[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.c.i.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\BsKPLu\nacos\config
+[33m2022-04-24 12:30:49[0;39m [32m[restartedMain][0;39m INFO  c.a.nacos.client.config.impl.Limiter - limitTime:5.0
+[33m2022-04-24 12:30:49[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.utils.JVMUtil - isMultiInstance:false
+[33m2022-04-24 12:30:49[0;39m [32m[restartedMain][0;39m INFO  c.b.service_video.VideoApplication - The following profiles are active: dev
+[33m2022-04-24 12:30:52[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+[33m2022-04-24 12:30:52[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[33m2022-04-24 12:30:52[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+[33m2022-04-24 12:30:52[0;39m [32m[restartedMain][0;39m INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[33m2022-04-24 12:30:52[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Starting...
+[33m2022-04-24 12:30:53[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Start completed.
+[33m2022-04-24 12:30:54[0;39m [32m[restartedMain][0;39m INFO  c.a.c.s.SentinelWebAutoConfiguration - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/*].
+[33m2022-04-24 12:30:54[0;39m [32m[restartedMain][0;39m INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[33m2022-04-24 12:30:54[0;39m [32m[restartedMain][0;39m INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33m2022-04-24 12:30:54[0;39m [32m[restartedMain][0;39m INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33m2022-04-24 12:30:55[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+[33m2022-04-24 12:30:55[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - initializer namespace from System Environment :null
+[33m2022-04-24 12:30:55[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+[33m2022-04-24 12:30:56[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+[33m2022-04-24 12:30:56[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.1.4","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8001,"scheduled":false,"serviceName":"bskplu_video@@service-video","stopped":false,"weight":1.0} to beat map.
+[33m2022-04-24 12:30:56[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] public registering service bskplu_video@@service-video with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.1.4","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8001,"weight":1.0}
+[33m2022-04-24 12:30:56[0;39m [32m[restartedMain][0;39m INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, bskplu_video service-video 192.168.1.4:8001 register finished
+[33m2022-04-24 12:30:56[0;39m [32m[restartedMain][0;39m INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[33m2022-04-24 12:30:56[0;39m [32m[restartedMain][0;39m INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[33m2022-04-24 12:30:56[0;39m [32m[restartedMain][0;39m INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[33m2022-04-24 12:30:57[0;39m [32m[restartedMain][0;39m INFO  c.b.service_video.VideoApplication - Started VideoApplication in 9.178 seconds (JVM running for 10.578)
+[33m2022-04-24 12:30:57[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.config.impl.ClientWorker - [fixed-localhost_8848] [subscribe] service-video+bskplu_video
+[33m2022-04-24 12:30:57[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.impl.CacheData - [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=service-video, group=bskplu_video, cnt=1
+[33m2022-04-24 12:30:57[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.config.impl.ClientWorker - [fixed-localhost_8848] [subscribe] service-video-dev.yml+bskplu_video
+[33m2022-04-24 12:30:57[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.impl.CacheData - [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=service-video-dev.yml, group=bskplu_video, cnt=1
+[33m2022-04-24 12:30:57[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.config.impl.ClientWorker - [fixed-localhost_8848] [subscribe] service-video.yml+bskplu_video
+[33m2022-04-24 12:30:57[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.impl.CacheData - [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=service-video.yml, group=bskplu_video, cnt=1
+[33m2022-04-24 12:32:49[0;39m [32m[http-nio-8001-exec-1][0;39m INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[33m2022-04-24 12:42:55[0;39m [32m[lettuce-eventExecutorLoop-1-7][0;39m INFO  i.l.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /129.211.209.210:6379
+[33m2022-04-24 12:42:55[0;39m [32m[lettuce-nioEventLoop-4-2][0;39m INFO  i.l.c.protocol.ReconnectionHandler - Reconnected to 129.211.209.210:6379
+[33m2022-04-24 12:43:08[0;39m [32m[SpringContextShutdownHook][0;39m INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+[33m2022-04-24 12:43:08[0;39m [32m[SpringContextShutdownHook][0;39m INFO  com.alibaba.nacos.client.naming - [BEAT] removing beat: bskplu_video@@service-video:192.168.1.4:8001 from beat map.
+[33m2022-04-24 12:43:08[0;39m [32m[SpringContextShutdownHook][0;39m INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] public deregistering service bskplu_video@@service-video with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceIdGenerator":"simple","ip":"192.168.1.4","ipDeleteTimeout":30000,"metadata":{},"port":8001,"weight":1.0}
+[33m2022-04-24 12:43:08[0;39m [32m[SpringContextShutdownHook][0;39m INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+[33m2022-04-24 12:43:08[0;39m [32m[SpringContextShutdownHook][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown initiated...
+[33m2022-04-24 12:43:08[0;39m [32m[SpringContextShutdownHook][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown completed.
+[33m2022-04-24 22:50:44[0;39m [32m[background-preinit][0;39m INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.6.Final
+[33m2022-04-24 22:50:45[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.c.i.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\BsKPLu\nacos\config
+[33m2022-04-24 22:50:45[0;39m [32m[restartedMain][0;39m INFO  c.a.nacos.client.config.impl.Limiter - limitTime:5.0
+[33m2022-04-24 22:50:45[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.utils.JVMUtil - isMultiInstance:false
+[33m2022-04-24 22:50:45[0;39m [32m[restartedMain][0;39m INFO  c.b.service_video.VideoApplication - The following profiles are active: dev
+[33m2022-04-24 22:50:48[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+[33m2022-04-24 22:50:48[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[33m2022-04-24 22:50:48[0;39m [32m[restartedMain][0;39m INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+[33m2022-04-24 22:50:48[0;39m [32m[restartedMain][0;39m INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[33m2022-04-24 22:50:49[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Starting...
+[33m2022-04-24 22:50:49[0;39m [32m[restartedMain][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Start completed.
+[33m2022-04-24 22:50:50[0;39m [32m[restartedMain][0;39m INFO  c.a.c.s.SentinelWebAutoConfiguration - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/*].
+[33m2022-04-24 22:50:51[0;39m [32m[restartedMain][0;39m INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[33m2022-04-24 22:50:51[0;39m [32m[restartedMain][0;39m INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33m2022-04-24 22:50:51[0;39m [32m[restartedMain][0;39m INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33m2022-04-24 22:50:51[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+[33m2022-04-24 22:50:51[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - initializer namespace from System Environment :null
+[33m2022-04-24 22:50:51[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+[33m2022-04-24 22:50:52[0;39m [32m[restartedMain][0;39m INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+[33m2022-04-24 22:50:52[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - [BEAT] adding beat: {"cluster":"DEFAULT","ip":"192.168.1.4","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8001,"scheduled":false,"serviceName":"bskplu_video@@service-video","stopped":false,"weight":1.0} to beat map.
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] public registering service bskplu_video@@service-video with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"192.168.1.4","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":8001,"weight":1.0}
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, bskplu_video service-video 192.168.1.4:8001 register finished
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  c.b.service_video.VideoApplication - Started VideoApplication in 9.867 seconds (JVM running for 11.602)
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.config.impl.ClientWorker - [fixed-localhost_8848] [subscribe] service-video+bskplu_video
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.impl.CacheData - [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=service-video, group=bskplu_video, cnt=1
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.config.impl.ClientWorker - [fixed-localhost_8848] [subscribe] service-video-dev.yml+bskplu_video
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.impl.CacheData - [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=service-video-dev.yml, group=bskplu_video, cnt=1
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  c.a.n.c.config.impl.ClientWorker - [fixed-localhost_8848] [subscribe] service-video.yml+bskplu_video
+[33m2022-04-24 22:50:53[0;39m [32m[restartedMain][0;39m INFO  c.a.n.client.config.impl.CacheData - [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=service-video.yml, group=bskplu_video, cnt=1
+[33m2022-04-24 22:54:50[0;39m [32m[http-nio-8001-exec-1][0;39m INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[33m2022-04-24 23:00:38[0;39m [32m[http-nio-8001-exec-1][0;39m INFO  c.b.s.h.MybatisPlusMetaObjectHandler - 字段数据填充配置
+[33m2022-04-24 23:03:49[0;39m [32m[http-nio-8001-exec-5][0;39m INFO  c.b.s.h.MybatisPlusMetaObjectHandler - 字段数据填充配置
+[33m2022-04-24 23:08:05[0;39m [32m[lettuce-eventExecutorLoop-1-7][0;39m INFO  i.l.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /129.211.209.210:6379
+[33m2022-04-24 23:08:05[0;39m [32m[lettuce-nioEventLoop-4-2][0;39m INFO  i.l.c.protocol.ReconnectionHandler - Reconnected to 129.211.209.210:6379
+[33m2022-04-24 23:10:05[0;39m [32m[SpringContextShutdownHook][0;39m INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+[33m2022-04-24 23:10:05[0;39m [32m[SpringContextShutdownHook][0;39m INFO  com.alibaba.nacos.client.naming - [BEAT] removing beat: bskplu_video@@service-video:192.168.1.4:8001 from beat map.
+[33m2022-04-24 23:10:05[0;39m [32m[SpringContextShutdownHook][0;39m INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] public deregistering service bskplu_video@@service-video with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceIdGenerator":"simple","ip":"192.168.1.4","ipDeleteTimeout":30000,"metadata":{},"port":8001,"weight":1.0}
+[33m2022-04-24 23:10:05[0;39m [32m[SpringContextShutdownHook][0;39m INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+[33m2022-04-24 23:10:05[0;39m [32m[SpringContextShutdownHook][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown initiated...
+[33m2022-04-24 23:10:05[0;39m [32m[SpringContextShutdownHook][0;39m INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown completed.
