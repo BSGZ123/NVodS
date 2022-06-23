@@ -60,10 +60,11 @@ public class SmsController {
      * 生成随机4位验证码
      * @return
      */
+    Random rng = new Random();//提升性能 避免随机性减少
     public String randomCode () {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 4; i++) {
-            int s = new Random().nextInt(10);
+            int s = rng.nextInt(10);
             sb.append(s);
         }
         return sb.toString();
