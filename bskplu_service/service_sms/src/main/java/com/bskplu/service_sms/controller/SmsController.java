@@ -44,10 +44,10 @@ public class SmsController {
         code=randomCode();
         Map<String,Object> param=new HashMap<>();
         param.put("code",code);
-        Boolean isSend=smsService.send(phone,param);
+        boolean isSend=smsService.send(phone,param);
 
-        //发送成功
-        if(isSend){
+        //发送成功 显式比较 避免出现空指针
+        if(isSend == true){
             //将验证码存入redis中，5min过期时间
             redisTemplate.opsForValue().set(phone,code,5, TimeUnit.MINUTES);
             return ResponseResult.ok();
